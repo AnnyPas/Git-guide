@@ -133,4 +133,15 @@
 - **git add** → **staged**. 
 - **git commit** → **tracked**. 
 
+---
+
+### *Схема статусов файлов*
+
+```mermaid
+graph LR;
+  untracked -- "git add" --> staged;
+  staged -- "git commit" --> tracked;
+  tracked -- "изменения в файле" --> modified;
+  modified -- "git add" --> staged;
+
 
